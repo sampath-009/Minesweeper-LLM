@@ -1,4 +1,3 @@
-# vision/capture.py
 
 from PIL import ImageGrab
 import datetime
@@ -9,7 +8,7 @@ def capture_window(region=None, save=False):
     Captures a screenshot of a specified region or full screen.
     region: (left, top, right, bottom)
     """
-    screenshot = ImageGrab.grab(bbox=region)  # bbox is optional
+    screenshot = ImageGrab.grab(bbox=region)  
 
     if save:
         ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")

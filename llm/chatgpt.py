@@ -1,4 +1,3 @@
-# llm/chatgpt.py
 
 import os
 from openai import OpenAI

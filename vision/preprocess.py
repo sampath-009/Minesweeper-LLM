@@ -1,5 +1,3 @@
-# vision/preprocess.py
-
 import cv2
 import numpy as np
 from PIL import Image
@@ -11,9 +9,6 @@ def preprocess(pil_img):
     img = np.array(pil_img)
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-    # Resize if needed (optional)
-    # gray = cv2.resize(gray, (300, 300), interpolation=cv2.INTER_NEAREST)
 
-    # Apply Gaussian blur or adaptive threshold if needed
     blur = cv2.GaussianBlur(gray, (3, 3), 0)
     return blur

@@ -1,6 +1,6 @@
 import tkinter as tk
 import random
-from agent import run_ai_agent_once  # 👈 import AI logic
+from agent import run_ai_agent_once  
 
 GRID_SIZE = 9
 NUM_MINES = 10
@@ -23,7 +23,6 @@ class MinesweeperGUI:
         self.place_mines()
         self.calculate_adjacent_mines()
 
-        # 👇 Add a button for the AI to make its move
         ai_button = tk.Button(self.root, text="🤖 NPC Move", command=run_ai_agent_once)
         ai_button.grid(row=GRID_SIZE, column=0, columnspan=GRID_SIZE)
 
@@ -73,9 +72,8 @@ class MinesweeperGUI:
         for cell in self.cells.values():
             if cell.is_mine:
                 cell.button.config(text="M", bg="red")
-        print("💥 Game Over: You clicked on a mine!")
+        print(" Game Over: You clicked on a mine!")
 
-# 👇 Ensure the GUI launches properly and app instance is available
 def launch_gui():
     root = tk.Tk()
     app = MinesweeperGUI(root)

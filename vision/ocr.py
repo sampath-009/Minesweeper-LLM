@@ -1,4 +1,3 @@
-# vision/ocr.py
 
 import pytesseract
 import numpy as np

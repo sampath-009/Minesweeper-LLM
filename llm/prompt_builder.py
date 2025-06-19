@@ -1,4 +1,3 @@
-# llm/prompt_builder.py
 
 def clean_ocr_output(raw_text):
     """
@@ -14,7 +13,7 @@ def clean_ocr_output(raw_text):
             if ch.isdigit():
                 row.append(ch)
             elif ch in ["M", "*", "-", ".", "–"]:
-                row.append("X")  # Treat as unrevealed tile or noise
+                row.append("X")  
         if row:
             grid.append(row)
 
